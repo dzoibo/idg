@@ -1,0 +1,34 @@
+:root {
+    --v-shadow-key-umbra-opacity: rgba(0, 0, 0, 0.1);
+    --v-shadow-key-penumbra-opacity: rgba(0, 0, 0, 0.075);
+    --v-shadow-key-ambient-opacity: rgba(0, 0, 0, 0.05);
+}
+
+.elevation-1 {
+    box-shadow: 0 0.125rem 0.25rem -0.125rem rgba(0, 0, 0, 0.15) !important;
+}
+
+// To be replaced by customized variables: https://vuetifyjs.com/en/features/sass-variables/#component-specific-variables
+.v-field--variant-solo, .v-field--variant-solo-filled {
+    box-shadow: none !important;
+}
+
+.v-select.fit,
+.v-autocomplete.fit {
+    width: min-content;
+}
+.v-select.fit  .v-select__selection--comma {
+    text-overflow: unset;
+}
+
+.v-text-field .v-input__details {
+    padding-inline: 0;
+}
+
+.v-dialog {
+    button {
+        min-width: 0;
+        min-height: 2.75rem;
+    }
+}
+

@@ -1,0 +1,80 @@
+// Imported in app.vue
+@import 'variables';
+@import 'vuetifyOverrides';
+@import 'utils';
+@import '../views/header';
+@import '../views/Form';
+@import '../views/ContentForm';
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+:root {
+    --dim-container-w: 70rem;
+}
+
+a {
+    color: #000;
+}
+
+* {
+    font-family: $font-secondary;
+}
+    
+h1 {
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+}
+
+.v-overlay__scrim {
+    background: rgba(0,0,0,0.2) !important;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.v-container {
+    padding: 0;
+}
+
+.App {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        position: relative;
+        min-height: calc(100vh - var(--dim-header-h));
+
+        &--desktop{
+            padding: 0 0 9rem 0;
+            background-size: 45% auto;
+        }
+    
+        &--mobile{
+            // padding: 0 20px;
+            background-size: 100% auto;
+        }
+    }
+}
+
+a:-webkit-any-link {
+    color: rgb(var(--v-theme-main-blue));
+    cursor: pointer;
+    text-decoration: none;
+}

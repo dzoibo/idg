@@ -1,0 +1,129 @@
+{
+    "projects": {
+        "project": "projet",
+        "projects": "projet | projet | projets",
+        "status": {
+            "ongoing": "En cours",
+            "finalized": "Finalisé"
+        },
+        "scope": {
+            "national": "National",
+            "regional": "Régional",
+            "state": "Département",
+            "city": "Ville"
+        },
+        "map": {
+            "filterProjects": "Filtrer les projets"
+        },
+        "admin": {
+            "sort": {
+                "sortBy": "Trier par",
+                "options": {
+                    "projectToValidate": "Projets en attente de validation",
+                    "projectName": "Nom du projet"
+                }
+            },
+            "goToPage": "Aller sur la page du projet",
+            "delete": "Supprimer"
+
+        },
+        "form": {
+            "title": {
+                "create": "Ajouter un projet",
+                "edit": "Modifier un projet",
+                "validate": "Valider un projet"
+            },
+            "fields": {
+                "name": {
+                    "label": "Nom du projet",
+                    "placeholder": "Nom du projet"
+                },
+                "website": {
+                    "label": "Site internet",
+                    "placeholder": "Site internet"
+                },
+                "status": {
+                    "label": "Statut",
+                    "placeholder": "Statut"
+                },
+                "description": {
+                    "label": "Description",
+                    "placeholder": "Description"
+                },
+                "calendar": {
+                    "label": "Calendrier",
+                    "placeholder": "Calendrier"
+                },
+                "deliverables": {
+                    "label": "Livrables",
+                    "placeholder": "Livrables"
+                },
+                "interventionZone": {
+                    "label": "Zone d'intervention",
+                    "placeholder": "Zone d'intervention"
+                },
+                "focalPointEmail": {
+                    "label": "Email",
+                    "placeholder": "mail@siteinternet.com"
+                },
+                "focalPointTel": {
+                    "label": "Téléphone (Whatsapp)",
+                    "placeholder": "0000000000"
+                },
+                "focalPointName": {
+                    "label": "Nom complet du Point de contact",
+                    "placeholder": "Prénom NOM"
+                },
+                "focalPointPosition": {
+                    "label": "Intitulé du Point de contact",
+                    "placeholder": ""
+                }
+            },
+            "section": {
+                "thematics": "Thématiques",
+                "financial": "Financement",
+                "contractingOrganisation": "Maîtrise d'ouvrage",
+                "beneficiaryTypes": "Bénéficiaires",
+                "localization": "Localisation",
+                "projectOwner": "Responsable du projet",
+                "focalPoint": "Point de contact"
+            }
+
+        },
+        "popup": {
+            "filters": {
+                "title": "Filtres",
+                "projectOwner": {
+                    "label" : "Maitre d'ouvrage"
+                },
+                "financial": {
+                    "label" : "Financement"
+                },
+                "beneficiaries": {
+                    "label" : "Bénéficiaires"
+                },
+                "interventionZones": {
+                    "label" : "Zones d'intervention"
+                },
+                "thematics": {
+                    "label" : "Thématiques"
+                },
+                "status": {
+                    "label" : "Statut"
+                }
+            },
+            "showTheProjects": "Afficher les {count} projets"
+        }
+    },
+    "projectPage": {
+        "projectOwner": "Responsable du projet",
+        "focalPoint": "Point de contact",
+        "about": "À propos",
+        "partners": "Partenaires",
+        "keyNumbers": "Chiffres-clés",
+        "projectCalendar": "Calendrier du projet",
+        "projectDeliverables": "Livrables du projet",
+        "inImages": "En images",
+        "otherProjectsWithSameThematics": "D’autres projets avec des thématiques communes"
+    }
+}

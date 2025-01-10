@@ -1,0 +1,20 @@
+$desktop-side-padding: 200px;
+$mobile-side-padding: 20px;
+$header-mobile-height: 64px;
+
+$dim-container-w: 70rem;
+
+$dim-dialog-w: 31.25rem;
+$dim-radius: 5px;
+
+// Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1100px;
+
+:root {
+  --dim-banner-h: 2rem;
+  --dim-header-nav-h: 5rem;
+  --dim-header-h: calc(var(--dim-banner-h) + var(--dim-header-nav-h));
+}

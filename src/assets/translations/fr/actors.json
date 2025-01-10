@@ -1,0 +1,58 @@
+{
+    "actors": {
+        "actors": "acteur | acteur | acteurs",
+        "title": "Annuaire\ndes acteurs",
+        "desc": "Consultez l’annuaire des acteurs du secteur de l’urbanisme de la ville de Douala.",
+        "search": "Rechercher un acteur",
+        "filtersTitle": "Affinez votre recherche",
+        "expertise": "Compétence",
+        "thematic": "Thematique d'intervention",
+        "adminScope": "Zone d'intervention",
+        "category": "Catégorie",
+        "resetFilters": "Reinitialiser les filtres",
+        "name": "Nom",
+        "acronym": "Acronyme",
+        "add": "Ajouter un acteur",
+        "form": {
+            "createTitle": "Ajouter un acteur",
+            "editTitle": "Modifier les informations",
+            "name": "Nom de l'acteur*",
+            "acronym": "Acronyme*",
+            "category": "Catégorie*",
+            "logo": "Logo",
+            "expertise": "Principaux domaines d'expertise*",
+            "thematic": "Principales thématiques*",
+            "adminScope": "Zones d'intervention*",
+            "description": "Description",
+            "contact": "Contact",
+            "office": "Etablissement",
+            "officeName": "Nom du siège",
+            "officeAddress": "Adresse de l'établissement",
+            "officeLocation": "Latiture/Longitude du siège",
+            "contactName": "Nom du contact",
+            "contactPosition": "Fonction du contact",
+            "website": "Site internet",
+            "phone": "Téléphone (Whatsapp)",
+            "images": "Images liées à l'acteur",
+            "drag": "Faites glisser un fichier ici ou",
+            "import": "Importer un fichier"
+        },
+        "admin": {
+            "sort": "Trier par",
+            "goToPage": "Aller sur la page de l'acteur",
+            "delete": "Supprimer"
+        }
+    },
+    "actorPage": {
+        "description": "Activité",
+        "projects": "Projets",
+        "data": "Données",
+        "resources": "Ressources",
+        "services": "Services",
+        "images": "En images",
+        "adminScope": "Zone d'intervention",
+        "showInMap": "Afficher dans l’outil Ma carte",
+        "contact": "Point de contact",
+        "similar": "D’autres acteurs avec des thématiques communes"
+    }
+}

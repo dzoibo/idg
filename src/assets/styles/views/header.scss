@@ -1,0 +1,98 @@
+
+@import '@/assets/styles/global/_variables';
+
+.Header{
+    &__container__mobile{
+        height: $header-mobile-height;
+    }
+
+    &__appLogo--desktop{
+        position: absolute;
+        top: 0px;
+        left: $desktop-side-padding;
+        z-index: 10;
+        height: 90px;
+    }
+
+    &__appLogo--mobile{
+        border: 1px solid rgb(var(--v-theme-main-grey));
+        border-radius: 10%;
+        padding: 5px;
+        height: 40px;
+    }
+
+    &__desktop__banner{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px $desktop-side-padding;
+        background: rgb(var(--v-theme-main-yellow));
+        color: rgb(var(--v-theme-main-blue));
+        height: 30px;
+    }
+
+    &__desktop__tabs{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px $desktop-side-padding 10px $desktop-side-padding;
+        background: linear-gradient(
+            to top right,
+            white 0%,
+            rgb(var(--v-theme-light-yellow)) 100%
+        );
+        height: 60px;
+    }
+
+    &__tabsText{
+        color: rgb(var(--v-theme-main-blue));
+        font-weight: 600;
+        text-transform: none;
+        text-decoration: none;
+
+        &--active{
+            color: rgb(var(--v-theme-main-red));
+        }
+    }
+
+    &__menu--mobile{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        z-index: 2000;
+
+        &__top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            height: 200px;
+        
+            img {
+               height: 160px; 
+            }
+        }
+
+        &__closer{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2001;
+            color: rgb(var(--v-theme-main-blue));
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: rgb(var(--v-theme-light-yellow));
+            flex-grow: 1;
+            padding: $mobile-side-padding;
+        }
+    }
+}
