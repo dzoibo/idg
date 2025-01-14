@@ -34,7 +34,7 @@
       hide-details
       v-model="newExternalImageUrl"
     ></v-text-field>
-    <v-btn color="main-red ml-2" @click="addNewExternalImage">Ajouter</v-btn>
+    <v-btn color="main-yellow ml-2" @click="addNewExternalImage">Ajouter</v-btn>
   </div>
 
   <div>

@@ -10,7 +10,7 @@
             v-if="userStore.userHasRole(UserRoles.EDITOR_PROJECTS) || userStore.userIsAdmin()"
             @click="projectStore.isProjectFormShown = true"
             prepend-icon="mdi-plus"
-            color="main-red"
+            color="main-yellow"
             >{{ $t('projects.form.title.create') }}</v-btn
           >
         </div>

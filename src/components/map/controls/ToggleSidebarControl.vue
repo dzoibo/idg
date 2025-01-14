@@ -7,7 +7,7 @@
     density="comfortable"
     :size="'2.5rem'"
     icon="mdi-arrow-left"
-    :color="isHiglighted ? 'bright-blue' : 'white'"
+    :color="isHiglighted ? 'main-blue' : 'white'"
     @click="isToggled = !isToggled"
   >
     <v-icon

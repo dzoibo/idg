@@ -1,6 +1,6 @@
 <template>
   <div class="ListFilterBox">
-    <SectionTitle :title="$t('list.filtersTitle')" />
+    <SectionTitle :title="$t('actors.filtersTitle')" />
     <div class="ListFilterBox__filterCtn">
       <slot></slot>
     </div>

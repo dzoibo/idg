@@ -100,7 +100,7 @@
       <span class="text-action" @click="resetFilters">{{ $t('labels.reset') }}</span>
     </template>
     <template #footer-right>
-      <v-btn color="main-red" @click="$emit('close')">{{
+      <v-btn color="main-yellow" @click="$emit('close')">{{
         $t('projects.popup.showTheProjects', { count: projectStore.filteredProjects.length })
       }}</v-btn>
     </template>

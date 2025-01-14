@@ -38,7 +38,7 @@ const isClosed = ref(false)
   align-self: flex-end;
 
   h2 {
-    color: rgb(var(--v-theme-main-red));
+    color: rgb(var(--v-theme-main-yellow));
   }
 
   .MyMapWelcomeBlock__moreAccess {

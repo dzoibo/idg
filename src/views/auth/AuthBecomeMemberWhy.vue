@@ -15,7 +15,7 @@
         :to="{ query: { ...$route.query, dialog: DialogKey.AUTH_BECOME_MEMBER } }"
         class="Link--withoutUnderline"
       >
-        <v-btn color="main-red" type="submit" block>{{
+        <v-btn color="main-yellow" type="submit" block>{{
           $t('auth.becomeMemberWhy.form.submit')
         }}</v-btn>
       </router-link>

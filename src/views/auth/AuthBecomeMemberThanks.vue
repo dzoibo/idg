@@ -39,7 +39,7 @@
             <v-checkbox v-model="action.selected.value" :label="action.label" hide-details="auto" />
           </v-list-item>
         </v-list>
-        <v-btn color="main-red" type="submit">{{
+        <v-btn color="main-yellow" type="submit">{{
           $t('auth.becomeMemberThanks.form.submit')
         }}</v-btn>
       </Form>

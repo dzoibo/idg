@@ -28,7 +28,7 @@
             <v-list-item @click="sortingResourcesSelectedMethod = SortMethod.UPDATED_AT">{{ $t('resources.updatedAt')
               }}</v-list-item>
           </ListSortBy>
-          <v-btn class="fixed-btn" color="main-red" prepend-icon="mdi-plus"
+          <v-btn class="fixed-btn" color="main-yellow" prepend-icon="mdi-plus"
             @click="resourceStore.isResourceFormShown = true"
             v-if="userStore.userIsAdmin() || userStore.userHasRole(UserRoles.EDITOR_RESSOURCES)">{{ $t('resources.add')
             }}</v-btn>

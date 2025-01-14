@@ -21,7 +21,7 @@
             <v-btn
               class="PageBanner__editBtn fixed-btn"
               prepend-icon="mdi-pencil-outline"
-              color="main-red"
+              color="main-yellow"
               variant="flat"
               v-if="isEditable"
               @click="$emit('edit')"
