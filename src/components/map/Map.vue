@@ -10,6 +10,8 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import ResetMapExtentControl from '@/components/map/controls/ResetMapExtentControl.vue'
 import { useApplicationStore } from '@/stores/applicationStore'
 import { IControl } from '@/services/map/MapService'
+import limitData from '@/assets/map_data/limit.json';
+import * as turf from '@turf/turf';
 
 const applicationStore = useApplicationStore()
 const triggerZoomReset = computed(() => applicationStore.triggerZoomReset)
@@ -35,7 +37,25 @@ onMounted(() => {
     center: [0, 0],
     zoom: 1,
     attributionControl: false
-  })
+  });
+
+  map.value.on('load',()=>{
+        map.value?.addSource('world-mask', {
+            type: 'geojson',
+            data: createInverseMaskGeometry(limitData)
+        });
+
+        // Ajouter une couche de masque noir
+        map.value?.addLayer({
+            id: 'world-mask-layer',
+            type: 'fill',
+            source: 'world-mask',
+            paint: {
+                'fill-color': 'black',
+                'fill-opacity': 0.5
+            }
+            });
+        })
 
   map.value.dragRotate.disable()
   map.value.touchZoomRotate.disableRotation()
@@ -61,6 +81,51 @@ const removeLayer = (layerName: string) => {
     map.value.removeLayer(layerName)
   }
 }
+
+const createInverseMaskGeometry=(limitData: any)=> {
+
+let maskedWorld: any;
+
+const world = turf.polygon([[
+    [-180, -90],
+    [180, -90],
+    [180, 90], 
+    [-180, 90],
+    [-180, -90]
+  ]]);
+
+// Parcourir chaque feature
+limitData.features.forEach((feature: any) => {
+  // Vérifier si c'est un MultiPolygon
+  if (feature.geometry.type === 'MultiPolygon') {
+    // Transformer le multipolygone en feature Turf
+    const multiPoly = turf.multiPolygon(
+      feature.geometry.coordinates, 
+      feature.properties
+    );
+
+    // Transformer le multipolygone en une collection de polygones individuels
+    const polyFeatures = multiPoly.geometry.coordinates.map(coords => 
+      turf.polygon(coords)
+    );
+
+    // Soustraire chaque polygone du monde masqué
+    polyFeatures.forEach((poly: any) => {
+      try {
+        if(maskedWorld){
+          maskedWorld=turf.difference(turf.featureCollection([maskedWorld, poly]))
+        }else{
+          maskedWorld = turf.difference(turf.featureCollection([world, poly]));
+        }
+      } catch (error) {
+        console.error('Erreur lors de la soustraction du polygone:', error);
+      }
+    });
+  }
+});
+
+return maskedWorld;
+};
 
 const setData = (sourceName: string, geojson: GeoJSON.GeoJSON) => {
   const source = map.value?.getSource(sourceName.toString()) as GeoJSONSource
